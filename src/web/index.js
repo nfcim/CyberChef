@@ -26,19 +26,7 @@ import OperationConfig from "../core/config/OperationConfig.json";
  * Main function used to build the CyberChef web app.
  */
 function main() {
-    const defaultFavourites = [
-        "To Base64",
-        "From Base64",
-        "To Hex",
-        "From Hex",
-        "To Hexdump",
-        "From Hexdump",
-        "URL Decode",
-        "Regular expression",
-        "Entropy",
-        "Fork",
-        "Magic"
-    ];
+    const defaultFavourites = [];
 
     const defaultOptions = {
         updateUrl:           true,
