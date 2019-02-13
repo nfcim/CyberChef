@@ -7,6 +7,7 @@
  */
 
 import Utils from "../Utils";
+import OperationError from "../errors/OperationError";
 
 
 /**
@@ -87,6 +88,10 @@ export function fromHex(data, delim="Auto", byteLen=2) {
     if (delim !== "None") {
         const delimRegex = delim === "Auto" ? /[^a-f\d]/gi : Utils.regexRep(delim);
         data = data.replace(delimRegex, "");
+    }
+
+    if (data.length % 2 === 1) {
+        throw new OperationError("Hex String cannot have a odd number of digits");
     }
 
     const output = [];

@@ -76,6 +76,12 @@ Triple DES uses a key length of 24 bytes (192 bits).`);
 
         input = Utils.convertToByteString(input, inputType);
 
+        if ((mode === "ECB" || mode === "CBC") && input.length % 8 > 0) {
+            throw new OperationError(`Invalid input length: ${key.length} bytes
+
+The length of input in ${mode} mode must be a multiple of 8.`);
+        }
+
         const cipher = forge.cipher.createCipher("DES-" + mode, key);
         cipher.start({iv: iv});
         cipher.update(forge.util.createBuffer(input));
