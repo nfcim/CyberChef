@@ -79,7 +79,9 @@ Triple DES uses a key length of 24 bytes (192 bits).`);
         const cipher = forge.cipher.createCipher("DES-" + mode, key);
         cipher.start({iv: iv});
         cipher.update(forge.util.createBuffer(input));
-        cipher.finish(function(){});
+        cipher.finish(function() {
+            return true;
+        });
 
         return outputType === "Hex" ? cipher.output.toHex() : cipher.output.getBytes();
     }
