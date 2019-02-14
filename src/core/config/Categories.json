@@ -52,7 +52,9 @@
     {
         "name": "Public-Key Encryption",
         "ops": [
-            "Generate RSA Key Pair"
+            "Generate RSA Key Pair",
+            "RSA Encrypt",
+            "RSA Decrypt"
         ]
     },
     {
