@@ -51,7 +51,9 @@
     },
     {
         "name": "Public-Key Encryption",
-        "ops": []
+        "ops": [
+            "Generate RSA Key Pair"
+        ]
     },
     {
         "name": "Hashing",
