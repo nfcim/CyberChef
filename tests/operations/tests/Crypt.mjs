@@ -41,8 +41,8 @@ The following algorithms will be used based on the size of the key:
     },
     {
         name: "AES Encrypt: AES-128-CBC, no IV, ASCII",
-        input: "The quick brown fox jumps over the lazy dog.",
-        expectedOutput: "2ef6c3fdb1314b5c2c326a2087fe1a82d5e73bf605ec8431d73e847187fc1c8fbbe969c177df1ecdf8c13f2f505f9498",
+        input: "The quick brown fox jumps over the lazy dog.    ",
+        expectedOutput: "2ef6c3fdb1314b5c2c326a2087fe1a82d5e73bf605ec8431d73e847187fc1c8fba9aa3cdc97c1638447558df1d39d99c",
         recipeConfig: [
             {
                 "op": "AES Encrypt",
@@ -56,8 +56,8 @@ The following algorithms will be used based on the size of the key:
     },
     {
         name: "AES Encrypt: AES-128-CBC with IV, ASCII",
-        input: "The quick brown fox jumps over the lazy dog.",
-        expectedOutput: "4fa077d50cc71a57393e7b542c4e3aea0fb75383b97083f2f568ffc13c0e7a47502ec6d9f25744a061a3a5e55fe95e8d",
+        input: "The quick brown fox jumps over the lazy dog.    ",
+        expectedOutput: "4fa077d50cc71a57393e7b542c4e3aea0fb75383b97083f2f568ffc13c0e7a473c9031d1750e599d5b3d70c188a5f584",
         recipeConfig: [
             {
                 "op": "AES Encrypt",
@@ -116,8 +116,8 @@ The following algorithms will be used based on the size of the key:
     },
     {
         name: "AES Encrypt: AES-128-ECB, ASCII",
-        input: "The quick brown fox jumps over the lazy dog.",
-        expectedOutput: "2ef6c3fdb1314b5c2c326a2087fe1a8238c5a5db7dff38f6f4eb75b2e55cab3d8d6113eb8d3517223b4545fcdb4c5a48",
+        input: "The quick brown fox jumps over the lazy dog.    ",
+        expectedOutput: "2ef6c3fdb1314b5c2c326a2087fe1a8238c5a5db7dff38f6f4eb75b2e55cab3dc364119902fdf3ee5896ebb99b1cdeb5",
         recipeConfig: [
             {
                 "op": "AES Encrypt",
@@ -148,8 +148,8 @@ Tag: 16a3e732a605cc9ca29108f742ca0743`,
     },
     {
         name: "AES Encrypt: AES-128-CBC, Binary",
-        input: "7a0e643132750e96d805d11e9e48e281fa39a41039286423cc1c045e5442b40bf1c3f2822bded3f9c8ef11cb25da64dda9c7ab87c246bd305385150c98f31465c2a6180fe81d31ea289b916504d5a12e1de26cb10adba84a0cb0c86f94bc14bc554f3018",
-        expectedOutput: "bf2ccb148e5df181a46f39764047e24fc94cc46bbe6c8d160fc25a977e4b630883e9e04d3eeae3ccbb2d57a4c22e61909f2b6d7b24940abe95d356ce986294270d0513e0ffe7a9928fa6669e1aaae4379310281dc27c0bb9e254684b2ecd7f5f944c8218f3bc680570399a508dfe4b65",
+        input: "7a0e643132750e96d805d11e9e48e281fa39a41039286423cc1c045e5442b40bf1c3f2822bded3f9c8ef11cb25da64dda9c7ab87c246bd305385150c98f31465c2a6180fe81d31ea289b916504d5a12e1de26cb10adba84a0cb0c86f94bc14bc",
+        expectedOutput: "bf2ccb148e5df181a46f39764047e24fc94cc46bbe6c8d160fc25a977e4b630883e9e04d3eeae3ccbb2d57a4c22e61909f2b6d7b24940abe95d356ce986294270d0513e0ffe7a9928fa6669e1aaae4379310281dc27c0bb9e254684b2ecd7f5f",
         recipeConfig: [
             {
                 "op": "AES Encrypt",
@@ -225,8 +225,8 @@ Tag: fa6bbb34c8cde65a3d7b93fb094fc84f`,
     },
     {
         name: "AES Encrypt: AES-128-ECB, Binary",
-        input: "7a0e643132750e96d805d11e9e48e281fa39a41039286423cc1c045e5442b40bf1c3f2822bded3f9c8ef11cb25da64dda9c7ab87c246bd305385150c98f31465c2a6180fe81d31ea289b916504d5a12e1de26cb10adba84a0cb0c86f94bc14bc554f3018",
-        expectedOutput: "869c057637a58cc3363bcc4bcfa62702abf85dff44300eb9fdcfb9d845772c8acb557c8d540baae2489c6758abef83d81b74239bef87c6c944c1b00ca160882bc15be9a6a3de4e6a50a2eab8b635c634027ed7eae4c1d2f08477c38b7dc24f6915da235bc3051f3a50736b14db8863e4",
+        input: "7a0e643132750e96d805d11e9e48e281fa39a41039286423cc1c045e5442b40bf1c3f2822bded3f9c8ef11cb25da64dda9c7ab87c246bd305385150c98f31465c2a6180fe81d31ea289b916504d5a12e1de26cb10adba84a0cb0c86f94bc14bc",
+        expectedOutput: "869c057637a58cc3363bcc4bcfa62702abf85dff44300eb9fdcfb9d845772c8acb557c8d540baae2489c6758abef83d81b74239bef87c6c944c1b00ca160882bc15be9a6a3de4e6a50a2eab8b635c634027ed7eae4c1d2f08477c38b7dc24f69",
         recipeConfig: [
             {
                 "op": "AES Encrypt",
@@ -240,8 +240,8 @@ Tag: fa6bbb34c8cde65a3d7b93fb094fc84f`,
     },
     {
         name: "AES Encrypt: AES-192-CBC, Binary",
-        input: "7a0e643132750e96d805d11e9e48e281fa39a41039286423cc1c045e5442b40bf1c3f2822bded3f9c8ef11cb25da64dda9c7ab87c246bd305385150c98f31465c2a6180fe81d31ea289b916504d5a12e1de26cb10adba84a0cb0c86f94bc14bc554f3018",
-        expectedOutput: "1aec90cd7f629ef68243881f3e2b793a548cbcdad69631995a6bd0c8aea1e948d8a5f3f2b7e7f9b77da77434c92a6257a9f57e937b883f4400511b990888a0b1d27c0a4b7f298e6f50b563135edc9fa7d8eceb6bc8163e6153a20cf07aa1e705bc5cb3a37b0452b4019cef8000d7c1b7",
+        input: "7a0e643132750e96d805d11e9e48e281fa39a41039286423cc1c045e5442b40bf1c3f2822bded3f9c8ef11cb25da64dda9c7ab87c246bd305385150c98f31465c2a6180fe81d31ea289b916504d5a12e1de26cb10adba84a0cb0c86f94bc14bc",
+        expectedOutput: "1aec90cd7f629ef68243881f3e2b793a548cbcdad69631995a6bd0c8aea1e948d8a5f3f2b7e7f9b77da77434c92a6257a9f57e937b883f4400511b990888a0b1d27c0a4b7f298e6f50b563135edc9fa7d8eceb6bc8163e6153a20cf07aa1e705",
         recipeConfig: [
             {
                 "op": "AES Encrypt",
@@ -317,8 +317,8 @@ Tag: be17cb31edb77f648b9d1032b235b33d`,
     },
     {
         name: "AES Encrypt: AES-192-ECB, Binary",
-        input: "7a0e643132750e96d805d11e9e48e281fa39a41039286423cc1c045e5442b40bf1c3f2822bded3f9c8ef11cb25da64dda9c7ab87c246bd305385150c98f31465c2a6180fe81d31ea289b916504d5a12e1de26cb10adba84a0cb0c86f94bc14bc554f3018",
-        expectedOutput: "56ef533db50a3b33951a76acede52b7d54fbae7fb07da20daa3e2731e5721ee4c13ab15ac80748c14dece982310530ad65480512a4cf70201473fb7bc3480446bc86b1ff9b4517c4c1f656bc236fab1aca276ae5af25f5871b671823f3cb3e426da059dd83a13f125bd6cfe600c331b0",
+        input: "7a0e643132750e96d805d11e9e48e281fa39a41039286423cc1c045e5442b40bf1c3f2822bded3f9c8ef11cb25da64dda9c7ab87c246bd305385150c98f31465c2a6180fe81d31ea289b916504d5a12e1de26cb10adba84a0cb0c86f94bc14bc",
+        expectedOutput: "56ef533db50a3b33951a76acede52b7d54fbae7fb07da20daa3e2731e5721ee4c13ab15ac80748c14dece982310530ad65480512a4cf70201473fb7bc3480446bc86b1ff9b4517c4c1f656bc236fab1aca276ae5af25f5871b671823f3cb3e42",
         recipeConfig: [
             {
                 "op": "AES Encrypt",
@@ -332,8 +332,8 @@ Tag: be17cb31edb77f648b9d1032b235b33d`,
     },
     {
         name: "AES Encrypt: AES-256-CBC, Binary",
-        input: "7a0e643132750e96d805d11e9e48e281fa39a41039286423cc1c045e5442b40bf1c3f2822bded3f9c8ef11cb25da64dda9c7ab87c246bd305385150c98f31465c2a6180fe81d31ea289b916504d5a12e1de26cb10adba84a0cb0c86f94bc14bc554f3018",
-        expectedOutput: "bc60a7613559e23e8a7be8e98a1459003fdb036f33368d8a30156c51464b49472705a4ddae05da96956ce058bb180dd301c5fd58bf6a2ded0d7dd4da85fd5ba43a4297691532bf7f4cd92bfcfd3704faf2f9bd5425049b34433ba90fb85c80646e6cb09ee4e4059e7cd753a2fef8bbad",
+        input: "7a0e643132750e96d805d11e9e48e281fa39a41039286423cc1c045e5442b40bf1c3f2822bded3f9c8ef11cb25da64dda9c7ab87c246bd305385150c98f31465c2a6180fe81d31ea289b916504d5a12e1de26cb10adba84a0cb0c86f94bc14bc",
+        expectedOutput: "bc60a7613559e23e8a7be8e98a1459003fdb036f33368d8a30156c51464b49472705a4ddae05da96956ce058bb180dd301c5fd58bf6a2ded0d7dd4da85fd5ba43a4297691532bf7f4cd92bfcfd3704faf2f9bd5425049b34433ba90fb85c8064",
         recipeConfig: [
             {
                 "op": "AES Encrypt",
@@ -409,8 +409,8 @@ Tag: 23ddbd3ee4de33f98a9ea9a170bdf268`,
     },
     {
         name: "AES Encrypt: AES-256-ECB, Binary",
-        input: "7a0e643132750e96d805d11e9e48e281fa39a41039286423cc1c045e5442b40bf1c3f2822bded3f9c8ef11cb25da64dda9c7ab87c246bd305385150c98f31465c2a6180fe81d31ea289b916504d5a12e1de26cb10adba84a0cb0c86f94bc14bc554f3018",
-        expectedOutput: "7e8521ba3f356ef692a51841807e141464aadc07bbc0ef2b628b8745bae356d245682a220688afca7be987b60cb120681ed42680ee93a67065619a3beaac11111a6cd88a6afa9e367722cb57df343f8548f2d691b295184da4ed5f3b763aaa8558502cb348ab58e81986337096e90caa",
+        input: "7a0e643132750e96d805d11e9e48e281fa39a41039286423cc1c045e5442b40bf1c3f2822bded3f9c8ef11cb25da64dda9c7ab87c246bd305385150c98f31465c2a6180fe81d31ea289b916504d5a12e1de26cb10adba84a0cb0c86f94bc14bc",
+        expectedOutput: "7e8521ba3f356ef692a51841807e141464aadc07bbc0ef2b628b8745bae356d245682a220688afca7be987b60cb120681ed42680ee93a67065619a3beaac11111a6cd88a6afa9e367722cb57df343f8548f2d691b295184da4ed5f3b763aaa85",
         recipeConfig: [
             {
                 "op": "AES Encrypt",
@@ -631,8 +631,8 @@ The following algorithms will be used based on the size of the key:
     },
     {
         name: "AES Decrypt: AES-128-CBC, no IV, ASCII",
-        input: "2ef6c3fdb1314b5c2c326a2087fe1a82d5e73bf605ec8431d73e847187fc1c8fbbe969c177df1ecdf8c13f2f505f9498",
-        expectedOutput: "The quick brown fox jumps over the lazy dog.",
+        input: "2ef6c3fdb1314b5c2c326a2087fe1a82d5e73bf605ec8431d73e847187fc1c8fba9aa3cdc97c1638447558df1d39d99c",
+        expectedOutput: "The quick brown fox jumps over the lazy dog.    ",
         recipeConfig: [
             {
                 "op": "AES Decrypt",
@@ -647,8 +647,8 @@ The following algorithms will be used based on the size of the key:
     },
     {
         name: "AES Decrypt: AES-128-CBC with IV, ASCII",
-        input: "4fa077d50cc71a57393e7b542c4e3aea0fb75383b97083f2f568ffc13c0e7a47502ec6d9f25744a061a3a5e55fe95e8d",
-        expectedOutput: "The quick brown fox jumps over the lazy dog.",
+        input: "4fa077d50cc71a57393e7b542c4e3aea0fb75383b97083f2f568ffc13c0e7a473c9031d1750e599d5b3d70c188a5f584",
+        expectedOutput: "The quick brown fox jumps over the lazy dog.    ",
         recipeConfig: [
             {
                 "op": "AES Decrypt",
@@ -711,8 +711,8 @@ The following algorithms will be used based on the size of the key:
     },
     {
         name: "AES Decrypt: AES-128-ECB, ASCII",
-        input: "2ef6c3fdb1314b5c2c326a2087fe1a8238c5a5db7dff38f6f4eb75b2e55cab3d8d6113eb8d3517223b4545fcdb4c5a48",
-        expectedOutput: "The quick brown fox jumps over the lazy dog.",
+        input: "2ef6c3fdb1314b5c2c326a2087fe1a8238c5a5db7dff38f6f4eb75b2e55cab3dc364119902fdf3ee5896ebb99b1cdeb5",
+        expectedOutput: "The quick brown fox jumps over the lazy dog.    ",
         recipeConfig: [
             {
                 "op": "AES Decrypt",
@@ -743,8 +743,8 @@ The following algorithms will be used based on the size of the key:
     },
     {
         name: "AES Decrypt: AES-128-CBC, Binary",
-        input: "bf2ccb148e5df181a46f39764047e24fc94cc46bbe6c8d160fc25a977e4b630883e9e04d3eeae3ccbb2d57a4c22e61909f2b6d7b24940abe95d356ce986294270d0513e0ffe7a9928fa6669e1aaae4379310281dc27c0bb9e254684b2ecd7f5f944c8218f3bc680570399a508dfe4b65",
-        expectedOutput: "7a0e643132750e96d805d11e9e48e281fa39a41039286423cc1c045e5442b40bf1c3f2822bded3f9c8ef11cb25da64dda9c7ab87c246bd305385150c98f31465c2a6180fe81d31ea289b916504d5a12e1de26cb10adba84a0cb0c86f94bc14bc554f3018",
+        input: "bf2ccb148e5df181a46f39764047e24fc94cc46bbe6c8d160fc25a977e4b630883e9e04d3eeae3ccbb2d57a4c22e61909f2b6d7b24940abe95d356ce986294270d0513e0ffe7a9928fa6669e1aaae4379310281dc27c0bb9e254684b2ecd7f5f",
+        expectedOutput: "7a0e643132750e96d805d11e9e48e281fa39a41039286423cc1c045e5442b40bf1c3f2822bded3f9c8ef11cb25da64dda9c7ab87c246bd305385150c98f31465c2a6180fe81d31ea289b916504d5a12e1de26cb10adba84a0cb0c86f94bc14bc",
         recipeConfig: [
             {
                 "op": "AES Decrypt",
@@ -823,8 +823,8 @@ The following algorithms will be used based on the size of the key:
     },
     {
         name: "AES Decrypt: AES-128-ECB, Binary",
-        input: "869c057637a58cc3363bcc4bcfa62702abf85dff44300eb9fdcfb9d845772c8acb557c8d540baae2489c6758abef83d81b74239bef87c6c944c1b00ca160882bc15be9a6a3de4e6a50a2eab8b635c634027ed7eae4c1d2f08477c38b7dc24f6915da235bc3051f3a50736b14db8863e4",
-        expectedOutput: "7a0e643132750e96d805d11e9e48e281fa39a41039286423cc1c045e5442b40bf1c3f2822bded3f9c8ef11cb25da64dda9c7ab87c246bd305385150c98f31465c2a6180fe81d31ea289b916504d5a12e1de26cb10adba84a0cb0c86f94bc14bc554f3018",
+        input: "869c057637a58cc3363bcc4bcfa62702abf85dff44300eb9fdcfb9d845772c8acb557c8d540baae2489c6758abef83d81b74239bef87c6c944c1b00ca160882bc15be9a6a3de4e6a50a2eab8b635c634027ed7eae4c1d2f08477c38b7dc24f69",
+        expectedOutput: "7a0e643132750e96d805d11e9e48e281fa39a41039286423cc1c045e5442b40bf1c3f2822bded3f9c8ef11cb25da64dda9c7ab87c246bd305385150c98f31465c2a6180fe81d31ea289b916504d5a12e1de26cb10adba84a0cb0c86f94bc14bc",
         recipeConfig: [
             {
                 "op": "AES Decrypt",
@@ -839,8 +839,8 @@ The following algorithms will be used based on the size of the key:
     },
     {
         name: "AES Decrypt: AES-192-CBC, Binary",
-        input: "1aec90cd7f629ef68243881f3e2b793a548cbcdad69631995a6bd0c8aea1e948d8a5f3f2b7e7f9b77da77434c92a6257a9f57e937b883f4400511b990888a0b1d27c0a4b7f298e6f50b563135edc9fa7d8eceb6bc8163e6153a20cf07aa1e705bc5cb3a37b0452b4019cef8000d7c1b7",
-        expectedOutput: "7a0e643132750e96d805d11e9e48e281fa39a41039286423cc1c045e5442b40bf1c3f2822bded3f9c8ef11cb25da64dda9c7ab87c246bd305385150c98f31465c2a6180fe81d31ea289b916504d5a12e1de26cb10adba84a0cb0c86f94bc14bc554f3018",
+        input: "1aec90cd7f629ef68243881f3e2b793a548cbcdad69631995a6bd0c8aea1e948d8a5f3f2b7e7f9b77da77434c92a6257a9f57e937b883f4400511b990888a0b1d27c0a4b7f298e6f50b563135edc9fa7d8eceb6bc8163e6153a20cf07aa1e705",
+        expectedOutput: "7a0e643132750e96d805d11e9e48e281fa39a41039286423cc1c045e5442b40bf1c3f2822bded3f9c8ef11cb25da64dda9c7ab87c246bd305385150c98f31465c2a6180fe81d31ea289b916504d5a12e1de26cb10adba84a0cb0c86f94bc14bc",
         recipeConfig: [
             {
                 "op": "AES Decrypt",
@@ -919,8 +919,8 @@ The following algorithms will be used based on the size of the key:
     },
     {
         name: "AES Decrypt: AES-192-ECB, Binary",
-        input: "56ef533db50a3b33951a76acede52b7d54fbae7fb07da20daa3e2731e5721ee4c13ab15ac80748c14dece982310530ad65480512a4cf70201473fb7bc3480446bc86b1ff9b4517c4c1f656bc236fab1aca276ae5af25f5871b671823f3cb3e426da059dd83a13f125bd6cfe600c331b0",
-        expectedOutput: "7a0e643132750e96d805d11e9e48e281fa39a41039286423cc1c045e5442b40bf1c3f2822bded3f9c8ef11cb25da64dda9c7ab87c246bd305385150c98f31465c2a6180fe81d31ea289b916504d5a12e1de26cb10adba84a0cb0c86f94bc14bc554f3018",
+        input: "56ef533db50a3b33951a76acede52b7d54fbae7fb07da20daa3e2731e5721ee4c13ab15ac80748c14dece982310530ad65480512a4cf70201473fb7bc3480446bc86b1ff9b4517c4c1f656bc236fab1aca276ae5af25f5871b671823f3cb3e42",
+        expectedOutput: "7a0e643132750e96d805d11e9e48e281fa39a41039286423cc1c045e5442b40bf1c3f2822bded3f9c8ef11cb25da64dda9c7ab87c246bd305385150c98f31465c2a6180fe81d31ea289b916504d5a12e1de26cb10adba84a0cb0c86f94bc14bc",
         recipeConfig: [
             {
                 "op": "AES Decrypt",
@@ -935,8 +935,8 @@ The following algorithms will be used based on the size of the key:
     },
     {
         name: "AES Decrypt: AES-256-CBC, Binary",
-        input: "bc60a7613559e23e8a7be8e98a1459003fdb036f33368d8a30156c51464b49472705a4ddae05da96956ce058bb180dd301c5fd58bf6a2ded0d7dd4da85fd5ba43a4297691532bf7f4cd92bfcfd3704faf2f9bd5425049b34433ba90fb85c80646e6cb09ee4e4059e7cd753a2fef8bbad",
-        expectedOutput: "7a0e643132750e96d805d11e9e48e281fa39a41039286423cc1c045e5442b40bf1c3f2822bded3f9c8ef11cb25da64dda9c7ab87c246bd305385150c98f31465c2a6180fe81d31ea289b916504d5a12e1de26cb10adba84a0cb0c86f94bc14bc554f3018",
+        input: "bc60a7613559e23e8a7be8e98a1459003fdb036f33368d8a30156c51464b49472705a4ddae05da96956ce058bb180dd301c5fd58bf6a2ded0d7dd4da85fd5ba43a4297691532bf7f4cd92bfcfd3704faf2f9bd5425049b34433ba90fb85c8064",
+        expectedOutput: "7a0e643132750e96d805d11e9e48e281fa39a41039286423cc1c045e5442b40bf1c3f2822bded3f9c8ef11cb25da64dda9c7ab87c246bd305385150c98f31465c2a6180fe81d31ea289b916504d5a12e1de26cb10adba84a0cb0c86f94bc14bc",
         recipeConfig: [
             {
                 "op": "AES Decrypt",
@@ -1015,8 +1015,8 @@ The following algorithms will be used based on the size of the key:
     },
     {
         name: "AES Decrypt: AES-256-ECB, Binary",
-        input: "7e8521ba3f356ef692a51841807e141464aadc07bbc0ef2b628b8745bae356d245682a220688afca7be987b60cb120681ed42680ee93a67065619a3beaac11111a6cd88a6afa9e367722cb57df343f8548f2d691b295184da4ed5f3b763aaa8558502cb348ab58e81986337096e90caa",
-        expectedOutput: "7a0e643132750e96d805d11e9e48e281fa39a41039286423cc1c045e5442b40bf1c3f2822bded3f9c8ef11cb25da64dda9c7ab87c246bd305385150c98f31465c2a6180fe81d31ea289b916504d5a12e1de26cb10adba84a0cb0c86f94bc14bc554f3018",
+        input: "7e8521ba3f356ef692a51841807e141464aadc07bbc0ef2b628b8745bae356d245682a220688afca7be987b60cb120681ed42680ee93a67065619a3beaac11111a6cd88a6afa9e367722cb57df343f8548f2d691b295184da4ed5f3b763aaa85",
+        expectedOutput: "7a0e643132750e96d805d11e9e48e281fa39a41039286423cc1c045e5442b40bf1c3f2822bded3f9c8ef11cb25da64dda9c7ab87c246bd305385150c98f31465c2a6180fe81d31ea289b916504d5a12e1de26cb10adba84a0cb0c86f94bc14bc",
         recipeConfig: [
             {
                 "op": "AES Decrypt",

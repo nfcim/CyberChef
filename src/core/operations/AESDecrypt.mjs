@@ -95,7 +95,9 @@ The following algorithms will be used based on the size of the key:
             tag: gcmTag
         });
         decipher.update(forge.util.createBuffer(input));
-        const result = decipher.finish();
+        const result = decipher.finish(function() {
+            return true;
+        });
 
         if (result) {
             return outputType === "Hex" ? decipher.output.toHex() : decipher.output.getBytes();

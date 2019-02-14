@@ -85,7 +85,9 @@ The following algorithms will be used based on the size of the key:
         const cipher = forge.cipher.createCipher("AES-" + mode, key);
         cipher.start({iv: iv});
         cipher.update(forge.util.createBuffer(input));
-        cipher.finish();
+        cipher.finish(function() {
+            return true;
+        });
 
         if (outputType === "Hex") {
             if (mode === "GCM") {
