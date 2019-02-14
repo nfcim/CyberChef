@@ -22,7 +22,7 @@ class AESEncrypt extends Operation {
 
         this.name = "AES Encrypt";
         this.module = "Ciphers";
-        this.description = "Advanced Encryption Standard (AES) is a U.S. Federal Information Processing Standard (FIPS). It was selected after a 5-year process where 15 competing designs were evaluated.<br><br><b>Key:</b> The following algorithms will be used based on the size of the key:<ul><li>16 bytes = AES-128</li><li>24 bytes = AES-192</li><li>32 bytes = AES-256</li></ul>You can generate a password-based key using one of the KDF operations.<br><br><b>IV:</b> The Initialization Vector should be 16 bytes long. If not entered, it will default to 16 null bytes.<br><br><b>Padding:</b> In CBC and ECB mode, PKCS#7 padding will be used.";
+        this.description = "Advanced Encryption Standard (AES) is a U.S. Federal Information Processing Standard (FIPS). It was selected after a 5-year process where 15 competing designs were evaluated.<br><br><b>Key:</b> The following algorithms will be used based on the size of the key:<ul><li>16 bytes = AES-128</li><li>24 bytes = AES-192</li><li>32 bytes = AES-256</li></ul>You can generate a password-based key using one of the KDF operations.<br><br><b>IV:</b> The Initialization Vector should be 16 bytes long. If not entered, it will default to 16 null bytes.";
         this.infoURL = "https://wikipedia.org/wiki/Advanced_Encryption_Standard";
         this.inputType = "string";
         this.outputType = "string";
@@ -81,6 +81,12 @@ The following algorithms will be used based on the size of the key:
         }
 
         input = Utils.convertToByteString(input, inputType);
+
+        if ((mode === "ECB" || mode === "CBC") && input.length % 16 > 0) {
+            throw new OperationError(`Invalid input length: ${input.length} bytes
+
+The length of input in ${mode} mode must be a multiple of 16.`);
+        }
 
         const cipher = forge.cipher.createCipher("AES-" + mode, key);
         cipher.start({iv: iv});

@@ -63,25 +63,36 @@ class TripleDESDecrypt extends Operation {
      * @returns {string}
      */
     run(input, args) {
-        const key = Utils.convertToByteString(args[0].string, args[0].option),
-            iv = Utils.convertToByteArray(args[1].string, args[1].option),
+        let key = Utils.convertToByteString(args[0].string, args[0].option);
+        const iv = Utils.convertToByteArray(args[1].string, args[1].option),
             mode = args[2],
             inputType = args[3],
             outputType = args[4];
 
-        if (key.length !== 24) {
+        if (key.length !== 24 && key.length !== 16) {
             throw new OperationError(`Invalid key length: ${key.length} bytes
 
-Triple DES uses a key length of 24 bytes (192 bits).
-DES uses a key length of 8 bytes (64 bits).`);
+Triple DES uses a key length of 16 bytes (128 bits) or 24 bytes (192 bits).`);
+        }
+
+        if (key.length === 16) {
+            key = key.concat(key.slice(0, 8));
         }
 
         input = Utils.convertToByteString(input, inputType);
 
+        if ((mode === "ECB" || mode === "CBC") && input.length % 8 > 0) {
+            throw new OperationError(`Invalid input length: ${input.length} bytes
+
+The length of input in ${mode} mode must be a multiple of 8.`);
+        }
+
         const decipher = forge.cipher.createDecipher("3DES-" + mode, key);
         decipher.start({iv: iv});
         decipher.update(forge.util.createBuffer(input));
-        const result = decipher.finish();
+        const result = decipher.finish(function() {
+            return true;
+        });
 
         if (result) {
             return outputType === "Hex" ? decipher.output.toHex() : decipher.output.getBytes();

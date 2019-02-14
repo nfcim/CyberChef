@@ -427,8 +427,7 @@ Tag: 23ddbd3ee4de33f98a9ea9a170bdf268`,
         input: "",
         expectedOutput: `Invalid key length: 0 bytes
 
-DES uses a key length of 8 bytes (64 bits).
-Triple DES uses a key length of 24 bytes (192 bits).`,
+DES uses a key length of 8 bytes (64 bits).`,
         recipeConfig: [
             {
                 "op": "DES Encrypt",
@@ -520,8 +519,7 @@ Triple DES uses a key length of 24 bytes (192 bits).`,
         input: "",
         expectedOutput: `Invalid key length: 0 bytes
 
-Triple DES uses a key length of 24 bytes (192 bits).
-DES uses a key length of 8 bytes (64 bits).`,
+Triple DES uses a key length of 16 bytes (128 bits) or 24 bytes (192 bits).`,
         recipeConfig: [
             {
                 "op": "Triple DES Encrypt",
@@ -535,8 +533,8 @@ DES uses a key length of 8 bytes (64 bits).`,
     },
     {
         name: "Triple DES Encrypt: DES-EDE3-CBC, Binary",
-        input: "7a0e643132750e96d805d11e9e48e281fa39a41039286423cc1c045e5442b40bf1c3f2822bded3f9c8ef11cb25da64dda9c7ab87c246bd305385150c98f31465c2a6180fe81d31ea289b916504d5a12e1de26cb10adba84a0cb0c86f94bc14bc554f3018",
-        expectedOutput: "f826c9116ea932eb7027a810b5ce21109c4ef2563c9f3ba5e2518f72484e88f8d3f6ff3f334f64bb6bb9ff91b70f6f29c037b10dee5fe16d7f0f41c9a7ecdd83f113a1dd66ab70783ee458c2366bf5fbc016f7c168c43c11d607692a3280e3750a6154a86b62c48d",
+        input: "7a0e643132750e96d805d11e9e48e281fa39a41039286423cc1c045e5442b40bf1c3f2822bded3f9c8ef11cb25da64dda9c7ab87c246bd305385150c98f31465c2a6180fe81d31ea289b916504d5a12e1de26cb10adba84a0cb0c86f94bc14bc",
+        expectedOutput: "f826c9116ea932eb7027a810b5ce21109c4ef2563c9f3ba5e2518f72484e88f8d3f6ff3f334f64bb6bb9ff91b70f6f29c037b10dee5fe16d7f0f41c9a7ecdd83f113a1dd66ab70783ee458c2366bf5fbc016f7c168c43c11d607692a3280e375",
         recipeConfig: [
             {
                 "op": "Triple DES Encrypt",
@@ -595,8 +593,8 @@ DES uses a key length of 8 bytes (64 bits).`,
     },
     {
         name: "Triple DES Encrypt: DES-EDE3-ECB Binary",
-        input: "7a0e643132750e96d805d11e9e48e281fa39a41039286423cc1c045e5442b40bf1c3f2822bded3f9c8ef11cb25da64dda9c7ab87c246bd305385150c98f31465c2a6180fe81d31ea289b916504d5a12e1de26cb10adba84a0cb0c86f94bc14bc554f3018",
-        expectedOutput: "aa81f23d1b3abebd68ac560e051a711c2923843beecddb0f7fe4113bd1874e73cccf3a2a494bb011e154ca2737b4d0eb5978a10316361074ed368d85d5aff5c8555ea101b0a468e58780a74c7830c561674c183c972a2b48931adf789cb16df304e169500f8c95ad",
+        input: "7a0e643132750e96d805d11e9e48e281fa39a41039286423cc1c045e5442b40bf1c3f2822bded3f9c8ef11cb25da64dda9c7ab87c246bd305385150c98f31465c2a6180fe81d31ea289b916504d5a12e1de26cb10adba84a0cb0c86f94bc14bc",
+        expectedOutput: "aa81f23d1b3abebd68ac560e051a711c2923843beecddb0f7fe4113bd1874e73cccf3a2a494bb011e154ca2737b4d0eb5978a10316361074ed368d85d5aff5c8555ea101b0a468e58780a74c7830c561674c183c972a2b48931adf789cb16df3",
         recipeConfig: [
             {
                 "op": "Triple DES Encrypt",
@@ -1034,8 +1032,7 @@ The following algorithms will be used based on the size of the key:
         input: "",
         expectedOutput: `Invalid key length: 0 bytes
 
-DES uses a key length of 8 bytes (64 bits).
-Triple DES uses a key length of 24 bytes (192 bits).`,
+DES uses a key length of 8 bytes (64 bits).`,
         recipeConfig: [
             {
                 "op": "DES Decrypt",
@@ -1127,8 +1124,7 @@ Triple DES uses a key length of 24 bytes (192 bits).`,
         input: "",
         expectedOutput: `Invalid key length: 0 bytes
 
-Triple DES uses a key length of 24 bytes (192 bits).
-DES uses a key length of 8 bytes (64 bits).`,
+Triple DES uses a key length of 16 bytes (128 bits) or 24 bytes (192 bits).`,
         recipeConfig: [
             {
                 "op": "Triple DES Decrypt",
@@ -1142,8 +1138,8 @@ DES uses a key length of 8 bytes (64 bits).`,
     },
     {
         name: "Triple DES Decrypt: DES-EDE3-CBC, Binary",
-        input: "f826c9116ea932eb7027a810b5ce21109c4ef2563c9f3ba5e2518f72484e88f8d3f6ff3f334f64bb6bb9ff91b70f6f29c037b10dee5fe16d7f0f41c9a7ecdd83f113a1dd66ab70783ee458c2366bf5fbc016f7c168c43c11d607692a3280e3750a6154a86b62c48d",
-        expectedOutput: "7a0e643132750e96d805d11e9e48e281fa39a41039286423cc1c045e5442b40bf1c3f2822bded3f9c8ef11cb25da64dda9c7ab87c246bd305385150c98f31465c2a6180fe81d31ea289b916504d5a12e1de26cb10adba84a0cb0c86f94bc14bc554f3018",
+        input: "f826c9116ea932eb7027a810b5ce21109c4ef2563c9f3ba5e2518f72484e88f8d3f6ff3f334f64bb6bb9ff91b70f6f29c037b10dee5fe16d7f0f41c9a7ecdd83f113a1dd66ab70783ee458c2366bf5fbc016f7c168c43c11d607692a3280e375",
+        expectedOutput: "7a0e643132750e96d805d11e9e48e281fa39a41039286423cc1c045e5442b40bf1c3f2822bded3f9c8ef11cb25da64dda9c7ab87c246bd305385150c98f31465c2a6180fe81d31ea289b916504d5a12e1de26cb10adba84a0cb0c86f94bc14bc",
         recipeConfig: [
             {
                 "op": "Triple DES Decrypt",
@@ -1202,8 +1198,8 @@ DES uses a key length of 8 bytes (64 bits).`,
     },
     {
         name: "Triple DES Decrypt: DES-EDE3-ECB, Binary",
-        input: "aa81f23d1b3abebd68ac560e051a711c2923843beecddb0f7fe4113bd1874e73cccf3a2a494bb011e154ca2737b4d0eb5978a10316361074ed368d85d5aff5c8555ea101b0a468e58780a74c7830c561674c183c972a2b48931adf789cb16df304e169500f8c95ad",
-        expectedOutput: "7a0e643132750e96d805d11e9e48e281fa39a41039286423cc1c045e5442b40bf1c3f2822bded3f9c8ef11cb25da64dda9c7ab87c246bd305385150c98f31465c2a6180fe81d31ea289b916504d5a12e1de26cb10adba84a0cb0c86f94bc14bc554f3018",
+        input: "aa81f23d1b3abebd68ac560e051a711c2923843beecddb0f7fe4113bd1874e73cccf3a2a494bb011e154ca2737b4d0eb5978a10316361074ed368d85d5aff5c8555ea101b0a468e58780a74c7830c561674c183c972a2b48931adf789cb16df3",
+        expectedOutput: "7a0e643132750e96d805d11e9e48e281fa39a41039286423cc1c045e5442b40bf1c3f2822bded3f9c8ef11cb25da64dda9c7ab87c246bd305385150c98f31465c2a6180fe81d31ea289b916504d5a12e1de26cb10adba84a0cb0c86f94bc14bc",
         recipeConfig: [
             {
                 "op": "Triple DES Decrypt",
