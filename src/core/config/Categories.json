@@ -31,6 +31,12 @@
         ]
     },
     {
+        "name": "Padding / Unpadding",
+        "ops": [
+            "Pad"
+        ]
+    },
+    {
         "name": "Data format",
         "ops": [
             "To Hexdump",
