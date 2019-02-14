@@ -63,6 +63,7 @@ import "./tests/OTP";
 import "./tests/PGP";
 import "./tests/PHP";
 import "./tests/Padding";
+import "./tests/Unpadding";
 import "./tests/ParseIPRange";
 import "./tests/ParseQRCode";
 import "./tests/PowerSet";

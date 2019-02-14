@@ -1,10 +1,11 @@
 /**
  * @author dangfan [dangf09@gmail.com]
- * @copyright DANG Fan Copyright 2019
+ * @copyright Crown Copyright 2019
  * @license Apache-2.0
  */
 
 import Operation from "../Operation";
+import OperationError from "../errors/OperationError";
 
 /**
  * Pad operation
@@ -60,7 +61,7 @@ class Pad extends Operation {
                 }
                 return input.concat(Array.from({length: padding}, () => 0));
         }
-        return [1];
+        throw new OperationError("Unknown arg");
     }
 
 }

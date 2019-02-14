@@ -2,7 +2,7 @@
  * Padding tests
  *
  * @author dangfan [dangf09@gmail.com]
- * @copyright DANG Fan Copyright 2019
+ * @copyright Crown Copyright 2019
  * @license Apache-2.0
  */
 import TestRegister from "../TestRegister";
