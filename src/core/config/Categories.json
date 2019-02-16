@@ -54,7 +54,8 @@
         "ops": [
             "Generate RSA Key Pair",
             "RSA Encrypt",
-            "RSA Decrypt"
+            "RSA Decrypt",
+            "RSA Sign"
         ]
     },
     {
