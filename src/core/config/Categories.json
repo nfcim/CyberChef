@@ -55,7 +55,8 @@
             "Generate RSA Key Pair",
             "RSA Encrypt",
             "RSA Decrypt",
-            "RSA Sign"
+            "RSA Sign",
+            "RSA Verify"
         ]
     },
     {
